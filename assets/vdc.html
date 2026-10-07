@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sharanya Mamindlapally ❤️</title>
+  <meta name="description" content="A private cinematic luxury birthday celebration crafted with love for Sharanya Mamindlapally by Sathwik Mamindlapally.">
+  <meta name="theme-color" content="#050508">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading-active">
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+  <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+   <audio id="bgAudio" loop preload="auto">
+  <source src="assets/birthday.mp3" type="audio/mpeg">
+</audio>
+  <source src="assets/birthday.mp3" type="audio/mp3">
+</audio>
+
+  <!-- Floating Media Manager Button -->
+  <div class="floating-upload-ctrl" id="floatingUploadContainer">
+    <button type="button" class="upload-trigger-btn" id="openUploadModalBtn">
+      <span>📷 Upload Photos & Memories</span>
+    </button>
+  </div>
+
+  <!-- Audio Toggle -->
+  <div class="floating-audio-ctrl" id="audioControl" aria-label="Toggle ambient music">
+    <button type="button" class="audio-btn" id="audioToggleBtn" aria-pressed="false" aria-label="Play ambient music">
+      <span class="audio-icon audio-icon-play">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </span>
+      <span class="audio-icon audio-icon-pause" style="display: none;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+      </span>
+      <span class="audio-label">PLAY MUSIC</span>
+    </button>
+  </div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="brand-signature">S &bull; S</div>
+    <nav class="nav-links">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#story" class="nav-link">Our Journey</a>
+      <a href="#message" class="nav-link">Letter</a>
+      <a href="#memories" class="nav-link">Vault</a>
+      <a href="#countdown" class="nav-link">Midnight</a>
+      <button type="button" class="nav-btn-highlight" id="openNoteBtn">Secret Note</button>
+    </nav>
+  </header>
+
+  <!-- Cinematic Opener -->
+  <div class="cinematic-loader" id="cinematicLoader" role="dialog" aria-modal="true" aria-label="Loading Experience">
+    <div class="loader-content">
+      <div class="loader-badge">A PRIVATE CELEBRATION CRAFTED WITH LOVE</div>
+      <p class="loader-subtext" id="loaderPhaseText">Preparing every sweet memory of us...</p>
+      <h1 class="loader-title" id="loaderMainTitle">Happy Birthday,<br>Sharanya Mamindlapally</h1>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill" id="loaderProgressFill"></div>
+      </div>
+      <button type="button" class="btn-luxury enter-btn" id="enterBtn" disabled>
+        <span class="btn-text">ENTER THE EXPERIENCE</span>
+        <span class="btn-glow"></span>
+      </button>
+    </div>
+  </div>
+
+  <main class="page-wrapper" id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-copy">
+          <span class="eyebrow-tag">OCTOBER 8 &bull; CELEBRATING MY BEAUTIFUL GIRL</span>
+          <h1 class="hero-title">
+            Happy Birthday,<br>
+            <span class="gradient-text">Sharanya Mamindlapally</span>
+          </h1>
+          <p class="hero-subtext">
+            From the college hallways to endless late-night video calls, silly arguments, and passionate love. You are my safe place, my queen, and my forever favorite.
+          </p>
+          <div class="hero-byline">
+            <span class="byline-label">Crafted solely with all my heart by</span>
+            <span class="byline-name">Sathwik Mamindlapally</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#story" class="btn-luxury">
+              <span class="btn-text">OUR STORY &bull; 2025 TO FOREVER</span>
+              <span class="btn-glow"></span>
+            </a>
+            <button type="button" class="btn-secondary" id="heroSurpriseTrigger">
+              <span>UNVEIL SURPRISE</span>
+            </button>
+          </div>
+        </div>
+
+        
+          <div class="hero-visual-frame">
+          <div class="photo-card-glass">
+            <div class="photo-glow-backdrop"></div>
+            <img 
+              src="assets/photo (1).jpeg" 
+              alt="Sharanya Mamindlapally" 
+              id="heroDisplayImg"
+              class="hero-portrait"
+            />
+            <div class="portrait-caption">
+              <span>Sharanya Mamindlapally</span>
+              <span>My Whole Heart ❤️</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="indicator-mouse">
+          <span class="mouse-wheel"></span>
+        </span>
+        <span class="indicator-label">SCROLL DOWN</span>
+      </div>
+    </section>
+
+    <!-- RELATIONSHIP STORY -->
+    <section class="timeline-section" id="story">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">THE CHAPTERS OF US</span>
+          <h2 class="section-title">How We Began, Grew & Stayed Together</h2>
+          <p class="section-sub">Every laugh, every video call through the night, and every storm we conquered.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- MILESTONE 1 -->
+          <article class="timeline-card timeline-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">SEPTEMBER 23, 2025 &bull; THE FIRST SPARK</span>
+              <h3 class="timeline-title">Seeing You in College & First Words</h3>
+              <p class="timeline-text">
+                It all started right there in college. I saw you, and everything paused. On September 23, 2025, we finally spoke to each other for the very first time. I had no idea back then that the girl standing across from me would become the most precious person in my entire life.
+              </p>
+            </div>
+          </article>
+
+          <!-- MILESTONE 2 -->
+          <article class="timeline-card timeline-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">LATE NIGHTS & SWEET TALKS</span>
+              <h3 class="timeline-title">Endless Video Calls Till Morning</h3>
+              <p class="timeline-text">
+                Before we knew it, our days started and ended with each other. Hours upon hours on video calls, falling asleep looking at each other's faces through phone screens, whispering until 4 AM, sharing every piece of our thoughts, and realizing nobody else in the world understood me like you do.
+              </p>
+            </div>
+          </article>
+
+          <!-- MILESTONE 3 -->
+          <article class="timeline-card timeline-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">OCTOBER 9, 2025 &bull; OFFICIAL LOVE</span>
+              <h3 class="timeline-title">You & Me &mdash; Together as One</h3>
+              <p class="timeline-text">
+                Just one day after your birthday, on October 9, 2025, we took that leap and stepped into our relationship. No turning back, no hesitation. From that exact date forward, you became my girl, and I became yours entirely.
+              </p>
+            </div>
+          </article>
+
+          <!-- MILESTONE 4 -->
+          <article class="timeline-card timeline-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">REAL, RAW & UNBREAKABLE</span>
+              <h3 class="timeline-title">The Fights, The Tears & The Stronger Love</h3>
+              <p class="timeline-text">
+                We had a very serious relationship, and yes—we had so many, many fights. Typical stubborn arguments, misunderstandings, tears, and heavy moments. But through every storm, we never gave up on each other. We talked it out, held on tighter, apologized, and proved that our bond is unbreakable.
+              </p>
+            </div>
+          </article>
+
+          <!-- MILESTONE 5 -->
+          <article class="timeline-card timeline-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-label">OCTOBER 8 & BEYOND</span>
+              <h3 class="timeline-title">Celebrating You Today & Every Tomorrow</h3>
+              <p class="timeline-text">
+                Today is your birthday, Sharanya. Looking back at September 23 and October 9, 2025, every single second with you has been a blessing. I promise to stand by you, protect your smile, and love you deeper every single day.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section class="message-section" id="message">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">OCTOBER 8 SPECIAL</span>
+          <h2 class="section-title">A Letter To The Girl Who Owns My Soul</h2>
+        </div>
+        <div class="letter-card-container">
+          <div class="letter-card" id="scrollMessageBlock">
+            <p class="letter-lead">My Dearest Sharanya,</p>
+            <p class="letter-paragraph">
+              Ever since September 23, 2025, when we spoke for the very first time, you completely reshaped my world. You brought light, warmth, and meaning into my life in ways I never knew possible.
+            </p>
+            <p class="letter-paragraph">
+              Think about all the nights we spent on video calls—laughing about stupid things until our stomachs hurt, comforting each other through tough times, and simply watching each other breathe when sleep took over. We've weathered real battles, intense fights, and emotional days, yet here we are: closer, stronger, and more in love than ever.
+            </p>
+            <p class="letter-paragraph highlight-mother-note">
+              I love you so much, Sharanya. I love you mumma, with every single beat of my heart. Happy Birthday, my love.
+            </p>
+            <div class="letter-signoff">
+              <p>Always and forever yours,</p>
+              <h3 class="signature-text">Sathwik Mamindlapally ❤️</h3>
+            </div>
+            <div class="card-action-bar">
+              <button type="button" class="btn-text-only" id="triggerHeartNote">
+                Open Private Birthday Note For You &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE MEMORY VAULT -->
+    <section class="gallery-section" id="memories">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">OUR MEMORY VAULT</span>
+          <h2 class="section-title">Moments Frozen in Time</h2>
+          <p class="section-sub">Photographs and video clips of us laughing, smiling, and loving each other.</p>
+        </div>
+
+        <div class="masonry-grid" id="masonryGallery"></div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section" id="countdown">
+      <div class="section-container">
+        <div class="countdown-card">
+          <span class="section-tag">OCTOBER 8 &bull; CELEBRATION CLOCK</span>
+          <h2 class="countdown-heading" id="countdownHeading">Counting Down To Sharanya's Day</h2>
+          <div class="countdown-grid" id="countdownGrid">
+            <div class="countdown-box">
+              <span class="countdown-number" id="timerDays">00</span>
+              <span class="countdown-unit">DAYS</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-number" id="timerHours">00</span>
+              <span class="countdown-unit">HOURS</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-number" id="timerMinutes">00</span>
+              <span class="countdown-unit">MINUTES</span>
+            </div>
+            <div class="countdown-box">
+              <span class="countdown-number" id="timerSeconds">00</span>
+              <span class="countdown-unit">SECONDS</span>
+            </div>
+          </div>
+          <p class="countdown-status" id="countdownStatus">It's October 8th! Happy Birthday to my gorgeous girlfriend Sharanya!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SURPRISE BUTTON -->
+    <section class="surprise-section" id="surprise">
+      <div class="surprise-container">
+        <span class="surprise-eyebrow">A SPECIAL CELEBRATION SURPRISE</span>
+        <h2 class="surprise-title">Ready for Your Surprise, Love?</h2>
+        <p class="surprise-description">
+          Tap the button below to celebrate your birthday with a golden shower of confetti.
+        </p>
+        <button type="button" class="btn-surprise" id="openSurpriseBtn">
+          <span class="btn-surprise-content">
+            <span class="star-icon">✨</span>
+            <span>OPEN YOUR SURPRISE</span>
+            <span class="star-icon">✨</span>
+          </span>
+          <span class="btn-surprise-aura"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="final-footer">
+      <div class="footer-container">
+        <blockquote class="cinematic-quote">
+          “In a world full of temporary things, you are my favorite forever.”
+        </blockquote>
+        <h3 class="footer-bday-text">Happy Birthday, Sharanya Mamindlapally ❤️</h3>
+        <p class="footer-signoff">&mdash; Sathwik Mamindlapally</p>
+        <div class="back-to-top-wrapper">
+          <button type="button" class="btn-back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+            </svg>
+            <span>Back to Beginning</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- DUAL MEDIA UPLOADER MODAL (1 HERO + MULTI GALLERY) -->
+  <div class="modal-overlay" id="uploadModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-glass-card upload-modal-card">
+      <button type="button" class="modal-close-btn" id="uploadCloseBtn" aria-label="Close Uploader">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">MEDIA MANAGER</span>
+        <h3 class="modal-title">Add Photos & Memories</h3>
+      </div>
+
+      <!-- 1. MAIN HERO PHOTO FORM -->
+      <div class="upload-section-box">
+        <h4 class="upload-box-title">1. Main Top Hero Photo</h4>
+        <p class="upload-box-desc">Choose 1 favorite portrait for the glowing top hero frame:</p>
+        <form id="heroUploadForm" class="upload-form-inline">
+          <input type="file" id="heroFileInput" accept="image/*" class="form-input" required />
+          <button type="submit" class="btn-luxury btn-sm" id="heroSubmitBtn">
+            <span>Set Main Photo</span>
+          </button>
+        </form>
+        <p id="heroStatusText" class="upload-status-indicator"></p>
+      </div>
+
+      <!-- 2. MEMORY VAULT MULTI UPLOADER -->
+      <div class="upload-section-box">
+        <h4 class="upload-box-title">2. Memory Vault Gallery</h4>
+        <p class="upload-box-desc">Select all your other photos/videos at once (hold Ctrl or select all 20-30 files):</p>
+        <form id="galleryUploadForm" class="upload-form-inline">
+          <input type="file" id="galleryFileInput" accept="image/*,video/mp4" class="form-input" multiple required />
+          <button type="submit" class="btn-luxury btn-sm" id="gallerySubmitBtn">
+            <span>Upload All Memories</span>
+          </button>
+        </form>
+        <p id="galleryStatusText" class="upload-status-indicator"></p>
+      </div>
+
+      <!-- LOCK FOREVER SECTION -->
+      <div class="danger-zone-divider"></div>
+      <div class="permanently-lock-box">
+        <p class="lock-tip">Done uploading everything? Click below to hide this upload tool forever so Sharanya sees a completely clean celebration:</p>
+        <button type="button" class="btn-danger-outline" id="lockAndHideUploaderBtn">
+          <span>🔒 Finish & Hide Upload Button Forever</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEDIA LIGHTBOX MODAL -->
+  <div class="modal-overlay" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-stage">
+      <button type="button" class="modal-close-btn" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <button type="button" class="lightbox-nav-btn prev-btn" id="lightboxPrev" aria-label="Previous Media">&#10094;</button>
+      <div class="lightbox-media-frame">
+        <img src="" alt="Enlarged Memory" id="lightboxImg" class="lightbox-img" style="display: none;"/>
+        <video src="" id="lightboxVideo" class="lightbox-video" controls playsinline style="display: none;"></video>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+      <button type="button" class="lightbox-nav-btn next-btn" id="lightboxNext" aria-label="Next Media">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- SECRET NOTE MODAL -->
+  <div class="modal-overlay" id="noteModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-glass-card">
+      <button type="button" class="modal-close-btn" id="noteClose" aria-label="Close Note">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">FOR SHARANYA'S EYES ONLY</span>
+        <h3 class="modal-title">To My Gorgeous Girlfriend</h3>
+      </div>
+      <div class="modal-body-scroll">
+        <p>My Dearest Sharanya,</p>
+        <p>I crafted this entire site solely for you, to freeze our journey in time. From the first time we spoke on September 23, 2025, to getting together on October 9, 2025, every single day has been an adventure.</p>
+        <p>We fought, we argued, we stayed awake through the night on video calls, and we grew into something real and unbreakable.</p>
+        <p><strong>I love you so much, Sharanya. I love you mumma, with all my heart and soul.</strong> Happy Birthday, my love!</p>
+      </div>
+      <div class="modal-footer">
+        <span class="modal-signature">&mdash; Sathwik Mamindlapally</span>
+        <button type="button" class="btn-luxury btn-sm" id="noteUnderstoodBtn">
+          <span>I Love You Too, Sathwik ❤️</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELEBRATION SURPRISE MODAL -->
+  <div class="modal-overlay surprise-modal-overlay" id="surpriseModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="surprise-modal-card">
+      <button type="button" class="modal-close-btn" id="surpriseClose" aria-label="Close Surprise">&times;</button>
+      <div class="surprise-badge">HAPPY BIRTHDAY SHARANYA</div>
+      <h2 class="surprise-headline">Happy Birthday to the Prettiest Girl in the World!</h2>
+      <div class="surprise-visual-ring">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring delay"></div>
+        <div class="spark-core">🎂</div>
+      </div>
+      <p class="surprise-body">
+        Sharanya Mamindlapally, you are my greatest blessing. May your year be filled with genuine smiles, dreams accomplished, and unending peace.
+      </p>
+      <p class="surprise-quote">“I love you mumma, always and forever.”</p>
+      <button type="button" class="btn-luxury" id="surpriseDoneBtn">
+        <span>Celebrate Sharanya's Day</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
